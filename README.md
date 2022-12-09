@@ -33,7 +33,7 @@ The repository is structured as follows:
 │   │   └── terragrunt.hcl
 │   └── vpc
 │       └── terragrunt.hcl
-├── modules                       <= The custome DMS module `dms_cross_acount_replication`)
+├── modules                       <= The custome DMS module `dms_cross_acount_replication`
 │   └── dms_cross_acount_replication
 │       ├── README.md
 │       ├── main.tf
