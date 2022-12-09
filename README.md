@@ -22,8 +22,8 @@ The repository is structured as follows:
 ```
 .
 ├── README.md                     <= This file
-├── account1.hcl                  <= Settings for the AWS account `account1`)
-├── account2.hcl                  <= Settings for the AWS account `account1`)
+├── account1.hcl                  <= Settings for the AWS account `account1`
+├── account2.hcl                  <= Settings for the AWS account `account1`
 ├── infra                         <= The AWS resources required for the DMS module)
 │   ├── iam 
 │   │   ├── iam.tf
@@ -39,8 +39,8 @@ The repository is structured as follows:
 │       ├── main.tf
 │       ├── outputs.tf
 │       └── variables.tf
-├── service                       <= The resources the user creates)
-│   ├── dms                       <= A sample configuration to copy a PostgreSQL database from `account1` to `account2`)
+├── service                       <= The resources the user creates
+│   ├── dms                       <= A sample configuration to copy a PostgreSQL database from `account1` to `account2`
 │   │   ├── README.md
 │   │   ├── table_mappings.json
 │   │   ├── task_settings.json
@@ -50,13 +50,13 @@ The repository is structured as follows:
 │   │   ├── table_mappings.json
 │   │   ├── task_settings.json
 │   │   └── terragrunt.hcl
-│   ├── source                    <= The source PostgreSQL database used in the sample configuration)
+│   ├── source                    <= The source PostgreSQL database used in the sample configuration
 │   │   └── terragrunt.hcl
-│   ├── source2                   <= The source MySQL database used in the sample configuration)
+│   ├── source2                   <= The source MySQL database used in the sample configuration
 │   │   └── terragrunt.hcl
-│   ├── target                    <= The target PostgreSQL database used in the sample configuration)
+│   ├── target                    <= The target PostgreSQL database used in the sample configuration
 │   │   └── terragrunt.hcl
-│   └── target2                   <= The target MySQL database used in the sample configuration)
+│   └── target2                   <= The target MySQL database used in the sample configuration
 │       └── terragrunt.hcl
 └── terragrunt.hcl
 ```
