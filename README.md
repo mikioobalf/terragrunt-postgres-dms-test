@@ -16,3 +16,49 @@ The [example configuration set up](./service/dms/) uses this module to perform a
     - Region: `eu-west-1`
 
 In this example, all resources (databases, replication instance) are in public VPCs. To use private VPCs, additional configurations will be required (e.g. VPC Peering, securigy groups).
+
+The repository is structured as follows:
+
+```
+.
+├── README.md                     <= This file
+├── account1.hcl                  <= Settings for the AWS account `account1`)
+├── account2.hcl                  <= Settings for the AWS account `account1`)
+├── infra                         <= The AWS resources required for the DMS module)
+│   ├── iam 
+│   │   ├── iam.tf
+│   │   ├── main.tf
+│   │   └── terraform.tfstate
+│   ├── sns
+│   │   └── terragrunt.hcl
+│   └── vpc
+│       └── terragrunt.hcl
+├── modules                       <= The custome DMS module `dms_cross_acount_replication`)
+│   └── dms_cross_acount_replication
+│       ├── README.md
+│       ├── main.tf
+│       ├── outputs.tf
+│       └── variables.tf
+├── service                       <= The resources the user creates)
+│   ├── dms                       <= A sample configuration to copy a PostgreSQL database from `account1` to `account2`)
+│   │   ├── README.md
+│   │   ├── table_mappings.json
+│   │   ├── task_settings.json
+│   │   └── terragrunt.hcl
+│   ├── dms2                      <= A sample configuration to copy a MySQL database from `account1` to `account2`
+│   │   ├── README.md
+│   │   ├── table_mappings.json
+│   │   ├── task_settings.json
+│   │   └── terragrunt.hcl
+│   ├── source                    <= The source PostgreSQL database used in the sample configuration)
+│   │   └── terragrunt.hcl
+│   ├── source2                   <= The source MySQL database used in the sample configuration)
+│   │   └── terragrunt.hcl
+│   ├── target                    <= The target PostgreSQL database used in the sample configuration)
+│   │   └── terragrunt.hcl
+│   └── target2                   <= The target MySQL database used in the sample configuration)
+│       └── terragrunt.hcl
+└── terragrunt.hcl
+```
+
+

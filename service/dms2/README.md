@@ -1,4 +1,4 @@
-# Configuration example
+# Sample configuration to copy a MySQL database
 
 This directory contains example files to copy a MySQL database from [account1](../../account1.hcl) to [account2](../../account2.hcl) using the [dms_cross_account_replication module](../../modules/dms_cross_acount_replication/) with Teragrunt.
 
