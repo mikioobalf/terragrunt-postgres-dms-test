@@ -24,7 +24,7 @@ The repository is structured as follows:
 ├── README.md                     <= This file
 ├── account1.hcl                  <= Settings for the AWS account `account1`
 ├── account2.hcl                  <= Settings for the AWS account `account1`
-├── infra                         <= The AWS resources required for the DMS module)
+├── infra                         <= The AWS resources required for the DMS module
 │   ├── iam 
 │   │   ├── iam.tf
 │   │   ├── main.tf
